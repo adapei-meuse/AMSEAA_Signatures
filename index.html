@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Générateur de signatures - ADAPEI de la Meuse</title>
+  <meta name="description"
+    content="Cette application web permet de générer des signatures personnalisées pour Office 365">
+  <meta name="author" content="ADAPEI de la Meuse">
+
+  <!-- Custom Style CSS-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/manifest/icon-192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="img/manifest/icon-512.png" sizes="512x512">
+
+  <!-- Social media -->
+  <meta property="og:title" content="Générateur de signatures" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adapei-meuse.github.io/signatures/" />
+  <meta property="og:image" content="https://adapei-meuse.github.io/signatures/img/signatures-social.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" value="#0d6efd">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- Bannière -->
+  <header class="container-parent py-3 bg-light">
+    <div class="container">
+      <h1>Générateur de signatures</h1>
+      <p class="mb-0">Cette application web permet de générer des signatures personnalisées pour Office 365</p>
+    </div>
+  </header>
+  <!-- Corps de page -->
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-9">
+        <form action="#" id="inputForm">
+          <h2>Informations générales</h2>
+          <p>Entrez ici votre nom, prénom, votre fonction et le service et/ou l'établissement ou vous travaillez</p>
+          <div class="form-row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="nameInput">Prénom</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Jean" required>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="surnameInput">Nom</label>
+                <input type="text" class="form-control" id="surnameInput" placeholder="RIVIERE" required>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="col-4">
+              <div class="form-group">
+                <label for="organisationTitleInput">Fonction</label>
+                <input type="text" name="organization-title" id="orgTitleInput" class="form-control"
+                  placeholder="Chef de service" required>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label for="organisationInput">Établissement et/ou service</label>
+                <input type="text" class="form-control" name="organisation" id="organisationInput"
+                  placeholder="ESAT de Cumières, Administration" required>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label for="poleInput">Selection du pôle</label>
+                <select class="form-control" name="poleInput" id="poleInput">
+                </select>
+              </div>
+            </div>
+          </div>
+          <h2>Informations de contact</h2>
+          <p>Entrez ici vos informations de contact, comme votre adresse email ou un numéro de téléphone</p>
+          <div class="form-row">
+            <div class="col-12 col-md-4">
+              <div class="form-group">
+                <label for="emailInput">Adresse email</label>
+                <input type="text" class="form-control" name="email" id="emailInput" placeholder="j.riviere">
+              </div>
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="form-group">
+                <label for="domainInput">Domaine</label>
+                <select class="form-control" name="domainInput" id="domainInput">
+                  <option value="@adapei-meuse.fr">@adapei-meuse.fr</option>
+                  <option value="@amseaa.fr">@amseaa.fr</option>
+                  <option value="@mda55.fr">@mda55.fr</option>
+                  <option value="@ideas-lab.tech">@ideas-lab.tech</option>
+                  <option value="@catholique55.fr">@catholique55.fr</option>
+                  <option value="@caph-handicoeur.fr">@caph-handicoeur.fr</option>
+                  <option value="@amie55.com">@amie55.com</option>
+                  <!-- Vous pouvez ajouter plus d'options ici -->
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <input type="checkbox" class ="form-check-input" id="checkPhoneInput" checked>
+                <label for="phoneInput">Numéro de téléphone</label>
+                <input type="tel" class="form-control" name="phone" id="phoneInput" minlength="10" maxlength="26"
+                  placeholder="09 71 00 16 06">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <input type="checkbox" class ="form-check-input" id="checkMobileInput" checked>
+                <label for="mobileInput">Numéro de mobile</label>
+                <input type="tel" class="form-control" name="mobile" id="mobileInput" minlength="10" maxlength="26"
+                  placeholder="06 42 27 43 19">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-3">
+        <h2>Aperçu de votre signature</h2>
+        <p>Voici un aperçu en temps réel de votre signature. Modifiez les champs ci-contre pour voir les changements</p>
+        <div class="card d-flex flex-row rounded-0" id="outputCard" style="width: 480px;max-height:270px; padding : 10px; border:none;">
+          <div class="w-auto d-flex align-items-center" id="outputLogo">
+            <img id="poleOutput" src="img/logos/adapei.png" alt="Logo du Pôle" width="125">
+          </div>
+
+          <div id="separator">
+            <!-- 
+              Separator display 
+              @see style.css 
+            -->
+          </div>
+
+          <div class="w-100">
+            <div class="card-body">
+              <h5 class="card-title mb-1"><span id="nameOutput">Jean</span> <span id="surnameOutput">RIVIERE</span></h5>
+              <p class="card-text mb-1" id="orgTitleOutput">Chef de service</p>
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-center">
+                  <svg class="bi bi-geo-alt mr-2" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                  </svg>
+                  <span id="organisationOutput">ESAT de Cumières, Administration</span>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi bi-at mr-2" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z" />
+                  </svg>
+                  <span id="emailOutput">j.riviere</span>
+                  <span id="domainOutput">@adapei-meuse.fr</span>
+                </li>
+                <li class="d-flex align-items-center" id="liPhone">
+                  <svg class="bi bi-briefcase mr-2" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6h-1v6a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-6H0v6z" />
+                    <path fill-rule="evenodd"
+                      d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v2.384l-7.614 2.03a1.5 1.5 0 0 1-.772 0L0 6.884V4.5zM1.5 4a.5.5 0 0 0-.5.5v1.616l6.871 1.832a.5.5 0 0 0 .258 0L15 6.116V4.5a.5.5 0 0 0-.5-.5h-13zM5 2.5A1.5 1.5 0 0 1 6.5 1h3A1.5 1.5 0 0 1 11 2.5V3h-1v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V3H5v-.5z" />
+                  </svg>
+                  <span id="phoneOutput">09 12 00 34 00</span>
+                </li>
+                <li class="d-flex align-items-center" id="liMobile">
+                  <svg class="bi bi-phone mr-2" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                    <path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                  </svg>
+                  <span id="mobileOutput">06 00 12 00 34</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p>Télécharger l'image :</p>
+        <a id ="lienSignature" href="" download="signature.jpg">
+          <img id="signatureOutput" src="" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Pied de page -->
+  <footer class="container-parent py-1 bg-light mt-auto">
+    <div class="container">
+      <b>Signatures v<span id="appRelease"></span></b> © 2020 ADAPEI de la Meuse - <a
+        href="https://github.com/adapei-meuse/signatures">GitHub</a>
+    </div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" 
+          integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" 
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <!-- Scripts -->
+  <script src="js/html2canvas.js"></script>
+  <script src="js/index.min.js"></script>
+</body>
+
+</html>
