@@ -34,25 +34,7 @@ const DEFAULT_IMG_PATH = "img/logos/";
  * src - DEFAULT_IMG_PATH + src -> Source du logo à afficher
  */
 const POLES_ARRAY = [
-  adapei = { lib: "Adapei de la Meuse", color : SEPARATOR_COLORS.ADAPEI, src:  "adapei.png"},
-  adapei60 = { lib: "[60 ans] Adapei de la Meuse", color : SEPARATOR_COLORS.ADAPEI, src:  "60ans.jpg"},
-  retroActif = { lib: "Les rétro actifs", color : SEPARATOR_COLORS.ADAPEI, src:  "retroActif.png"},
-  meuseInsertion = { lib: "Meuse Insertion", color : SEPARATOR_COLORS.ADAPEI, src: "meuseInsertion.png"},
-  adultesDependants = { lib: "Pôle Adultes Dépendants", color : SEPARATOR_COLORS.ADAPEI, src:  "adultesDependants.png"},
-  agricole = { lib: "Pôle Agricole", color : SEPARATOR_COLORS.ADAPEI, src:  "agricole.png"},
-  enfance = { lib: "Pôle Enfance", color : SEPARATOR_COLORS.ADAPEI, src: "enfance.png"},
-  habitat = { lib: "Pôle Habitat", color : SEPARATOR_COLORS.ADAPEI, src:  "habitat.png"},
-  industriel = { lib: "Pôle Industriel", color : SEPARATOR_COLORS.ADAPEI, src: "industriel.png"},
-  mobiMeuse = { lib: "Mobi'Meuse", color: SEPARATOR_COLORS.ADAPEI, src: "mobimeuse.png" },
-  abri = { lib: "Abri des Pèlerins", color: SEPARATOR_COLORS.ADAPEI, src: "abri.png" },
-  pairactifs = { lib: "Pairs'Actifs", color: SEPARATOR_COLORS.DIOCESE, src :"pairsactifs.png"},
-  diocese = { lib: "Diocèse", color : SEPARATOR_COLORS.DIOCESE, src:  "diocese.png", hidden: true, domaine: "@catholique55.fr"},
-  mda = { lib: "Maison des Adolescents", color : SEPARATOR_COLORS.DIOCESE, src:  "mda.jpg", hidden: true, domaine: "@mda55.fr"},
   amseaa = { lib: "AMSEAA", color : SEPARATOR_COLORS.ADAPEI, src:  "amseaa.jpg", hidden: true, domaine: "@amseaa.fr"},
-  ideaslab = { lib: "Ideas Lab", color : SEPARATOR_COLORS.IDEASLAB, src: "ideaslab.png", hidden: true, domaine: "@ideas-lab.tech"},
-  handicoeur = { lib: "Handi Coeur", color : SEPARATOR_COLORS.ADAPEI, src:  "handicoeur.jpg", hidden: true, domaine: "@caph-handicoeur.fr"},
-  amie55 = { lib: "amie55", color : SEPARATOR_COLORS.ADAPEI, src:  "amie55.jpg", hidden: true, domaine: "@amie55.com"},
-
 // Utilisé pour la selection de l'icone.
 var poleInput = document.getElementById("poleInput");
 
