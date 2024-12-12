@@ -1,71 +1,7 @@
-/* Style général */
-body {
-    font-family: 'Duru Sans', 'Actor', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Titres principaux */
-.titredio {
-    text-align: center;
-    color: #0056b3;
-    margin: 20px 0;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-/* Grille de liens */
-#grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Liens */
-#grid div {
-    text-align: center;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-#grid div a {
-    text-decoration: none;
-    color: #0056b3;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-#grid div:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Pied de page */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0056b3;
-    color: #ffffff;
-    font-size: 14px;
-    position: relative;
-}
-
-.footer a {
-    color: #ffd700;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
+#separator{
+    border-left: 0.2rem solid;
+    border-color: #e6b000;
+    height : 145px;
+    margin : auto;
+    margin-left : 10px;
 }
